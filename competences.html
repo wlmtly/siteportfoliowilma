@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wilma TALLY – Compétences</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="CSS_boostrap/bootstrap.min.css" rel="stylesheet">
+  <link href="CSS_perso/style_personnel.css" rel="stylesheet">
+  <style>
+    :root { --dark:#0f172a; --accent:#e2c97e; --light:#f8f5f0; --text-muted:#94a3b8; }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--light);font-family:'DM Sans',sans-serif;color:var(--dark);}
+    nav.site-nav{position:sticky;top:0;z-index:100;background:var(--dark);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:60px;}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--accent);text-decoration:none;letter-spacing:.05em;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{color:#cbd5e1;text-decoration:none;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s;}
+    .nav-links a:hover{color:var(--accent);}
+    .lang-switch{display:flex;gap:.4rem;}
+    .lang-btn{background:none;border:1px solid #334155;color:#94a3b8;border-radius:3px;padding:2px 8px;font-size:.75rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;}
+    .lang-btn.active,.lang-btn:hover{background:var(--accent);color:var(--dark);border-color:var(--accent);}
+    .page-header{background:var(--dark);color:white;padding:4rem 2rem 3rem;text-align:center;}
+    .page-header .section-label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;}
+    .page-header h1{font-family:'Playfair Display',serif;font-size:2.5rem;}
+    .section-wrapper{max-width:760px;margin:0 auto;padding:5rem 2rem;}
+    .skill-category{margin-bottom:3rem;}
+    .category-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;padding-bottom:.5rem;border-bottom:1px solid #e2e8f0;}
+    .skill-row{margin-bottom:1.4rem;}
+    .skill-header{display:flex;justify-content:space-between;margin-bottom:.4rem;font-size:.85rem;font-weight:500;}
+    .skill-bar-track{background:#e2e8f0;height:6px;border-radius:3px;overflow:hidden;}
+    .skill-bar-fill{height:100%;background:linear-gradient(90deg,var(--dark),#1e3a5f);border-radius:3px;}
+    .contact-section{background:var(--dark);color:white;text-align:center;padding:5rem 2rem;}
+    .section-label-light{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#94a3b8;margin-bottom:.5rem;}
+    .section-title{font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:2rem;}
+    .contact-email{color:var(--accent);font-family:'Playfair Display',serif;font-size:1.3rem;text-decoration:none;display:block;margin-bottom:2rem;}
+    .contact-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+    .btn-gold{background:var(--accent);color:var(--dark);border:none;padding:.75rem 2rem;border-radius:2px;font-size:.85rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:opacity .2s;}
+    .btn-gold:hover{opacity:.85;color:var(--dark);}
+    .btn-outline-light-wt{background:transparent;color:#fff;border:1px solid #334155;padding:.75rem 2rem;border-radius:2px;font-size:.85rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .2s;}
+    .btn-outline-light-wt:hover{border-color:var(--accent);color:var(--accent);}
+    .footer-logo{display:flex;justify-content:center;padding:2.5rem;background:var(--dark);border-top:1px solid #1e2d45;}
+    .hamburger{display:none;background:none;border:none;color:white;font-size:1.3rem;cursor:pointer;}
+    @media(max-width:768px){.nav-links{display:none;}.hamburger{display:block;}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:var(--dark);padding:1rem 2rem;gap:1rem;border-top:1px solid #1e2d45;}}
+  </style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">WT</a>
+  <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
+  <ul class="nav-links">
+    <li><a href="index.html" data-i18n="nav-home">Accueil</a></li>
+    <li><a href="profil.html" data-i18n="nav-profile">Profil</a></li>
+    <li><a href="experience.html" data-i18n="nav-exp">Expériences</a></li>
+    <li><a href="competences.html" data-i18n="nav-skills">Compétences</a></li>
+  </ul>
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <p class="section-label" data-i18n="skills-label">Expertise</p>
+  <h1 data-i18n="page-title">Mes compétences</h1>
+</div>
+
+<div class="section-wrapper">
+  <div class="skill-category">
+    <p class="category-label" data-i18n="cat-data">Data & Statistiques</p>
+    <div class="skill-row"><div class="skill-header"><span>R</span><span>75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:75%"></div></div></div>
+    <div class="skill-row"><div class="skill-header"><span>SAS</span><span>65%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:65%"></div></div></div>
+    <div class="skill-row"><div class="skill-header"><span>Python</span><span>60%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:60%"></div></div></div>
+    <div class="skill-row"><div class="skill-header"><span>SQL</span><span>70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:70%"></div></div></div>
+  </div>
+  <div class="skill-category">
+    <p class="category-label" data-i18n="cat-tools">Outils & Visualisation</p>
+    <div class="skill-row"><div class="skill-header"><span>Power BI</span><span>70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:70%"></div></div></div>
+    <div class="skill-row"><div class="skill-header"><span>Excel</span><span>75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:75%"></div></div></div>
+    <div class="skill-row"><div class="skill-header"><span>Access</span><span>55%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:55%"></div></div></div>
+  </div>
+  <div class="skill-category">
+    <p class="category-label" data-i18n="cat-web">Web</p>
+    <div class="skill-row"><div class="skill-header"><span>HTML / CSS</span><span>65%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:65%"></div></div></div>
+  </div>
+</div>
+
+<section class="contact-section" id="contact">
+  <p class="section-label-light">Contact</p>
+  <h2 class="section-title" data-i18n="contact-title">Me contacter</h2>
+  <a href="mailto:wilma.tallypro@gmail.com" class="contact-email">wilma.tallypro@gmail.com</a>
+  
+  <div class="contact-actions">
+    <a href="mailto:wilma.tallypro@gmail.com?subject=Contact%20depuis%20votre%20portfolio&body=Bonjour%20Wilma%2C%0A%0A"  id="mailto-btn" class="btn-gold" data-i18n="contact-send"><i class="bi bi-envelope me-2"></i>Envoyer un message</a>
+    <a href="https://drive.google.com/uc?export=download&id=1rvoaLvjEdK0UIiySeNSplhgD0tvmNSg1" id="cv-btn" download class="btn-outline-light-wt" data-i18n="contact-cv"><i class="bi bi-file-earmark-person-fill me-2"></i>Télécharger mon CV</a>
+  </div>
+</section>
+
+<footer class="footer-logo">
+  <svg width="40" height="40" viewBox="0 0 90 90" fill="none"><path d="M18 28 L30 62 L45 38 L60 62 L72 28" stroke="#e2c97e" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+const translations={fr:{'nav-home':'Accueil','nav-profile':'Profil','nav-exp':'Expériences','nav-skills':'Compétences','skills-label':'Expertise','page-title':'Mes compétences','cat-data':'Data & Statistiques','cat-tools':'Outils & Visualisation','cat-web':'Web','contact-title':'Me contacter','contact-send':'Envoyer un message','contact-cv':'Télécharger mon CV'},en:{'nav-home':'Home','nav-profile':'Profile','nav-exp':'Experience','nav-skills':'Skills','skills-label':'Expertise','page-title':'My skills','cat-data':'Data & Statistics','cat-tools':'Tools & Visualisation','cat-web':'Web','contact-title':'Get in touch','contact-send':'Send a message','contact-cv':'Download my CV'}};
+let currentLang=localStorage.getItem('wt-lang')||'fr';
+function setLang(lang){currentLang=lang;localStorage.setItem('wt-lang',lang);document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(translations[lang][k])el.textContent=translations[lang][k];});const mb=document.getElementById('mailto-btn');if(mb)mb.href=lang==='en'?"mailto:wilma.tallypro@gmail.com?subject=Contact%20from%20your%20portfolio&body=Hello%20Wilma%2C%0A%0A":"mailto:wilma.tallypro@gmail.com?subject=Contact%20depuis%20votre%20portfolio&body=Bonjour%20Wilma%2C%0A%0A";const cvBtn=document.getElementById('cv-btn');if(cvBtn)cvBtn.href=lang==='en'?'https://drive.google.com/uc?export=download&id=1rvoaLvjEdK0UIiySeNSplhgD0tvmNSg1':'https://drive.google.com/uc?export=download&id=1MnFQ2f_ZeUooVrP5eJOZpUEaOOGYFeqI';document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.lang-btn').forEach(b=>{if(b.textContent===lang.toUpperCase())b.classList.add('active');});}
+setLang(currentLang);
+</script>
+</body>
+</html>
