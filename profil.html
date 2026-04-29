@@ -83,6 +83,7 @@
 
   <div class="tab-buttons">
     <button class="tab-btn active" data-tab="presentation" data-tab-key="tab1">Présentation</button>
+    <button class="tab-btn" data-tab="parcours" data-tab-key="tab5">Parcours</button>
     <button class="tab-btn" data-tab="langues" data-tab-key="tab2">Langues</button>
     <button class="tab-btn" data-tab="softskills" data-tab-key="tab3">Soft skills</button>
     <button class="tab-btn" data-tab="passions" data-tab-key="tab4">Passions</button>
@@ -91,6 +92,17 @@
   <div id="presentation" class="tab-panel active">
     <p data-i18n="pres-text"></p>
     <p data-i18n="pres-text2"></p>
+  </div>
+
+  <div id="parcours" class="tab-panel">
+    <div class="passion-item">
+      <h5 data-i18n="edu1-title"> BUT Sciences des Données — IUT de Paris Rives de Seine</h5>
+      <p data-i18n="edu1-desc">2e année, Parcours Exploration et Modélisation Statistique (EMS). Formation en analyse statistique, traitement de données, visualisation et programmation (R, Python, SQL, SAS). Projets appliqués en partenariat avec des organisations professionnelles.</p>
+    </div>
+    <div class="passion-item">
+      <h5 data-i18n="edu2-title"> Baccalauréat Technologique (STMG) — Lycée Hélène Boucher</h5>
+      <p data-i18n="edu2-desc">Spécialité : Mercatique. Mention : Bien. Obtenu en 2024.</p>
+    </div>
   </div>
 
   <div id="langues" class="tab-panel">
@@ -115,15 +127,15 @@
 
   <div id="passions" class="tab-panel">
     <div class="passion-item">
-      <h5 data-i18n="pass1-title">🎵 Musique · Cinéma · Art</h5>
+      <h5 data-i18n="pass1-title"> Musique · Cinéma · Art</h5>
       <p data-i18n="pass1"></p>
     </div>
     <div class="passion-item">
-      <h5 data-i18n="pass2-title">✈️ Voyages · Culture</h5>
+      <h5 data-i18n="pass2-title"> Voyages · Culture</h5>
       <p data-i18n="pass2"></p>
     </div>
     <div class="passion-item">
-      <h5 data-i18n="pass3-title">🍳 Cuisine</h5>
+      <h5 data-i18n="pass3-title"> Cuisine</h5>
       <p data-i18n="pass3"></p>
     </div>
   </div>
@@ -137,6 +149,7 @@
   
   <div class="contact-actions">
     <a href="mailto:wilma.tallypro@gmail.com?subject=Contact%20depuis%20votre%20portfolio&body=Bonjour%20Wilma%2C%0A%0A"  id="mailto-btn" class="btn-gold" data-i18n="contact-send"></a>
+    <a href="https://linkedin.com/in/wilma-tally" target="_blank" class="btn-gold" style="background:transparent;border:1px solid var(--accent);color:var(--accent);" data-i18n="contact-linkedin"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
     <a href="https://drive.google.com/uc?export=download&id=1rvoaLvjEdK0UIiySeNSplhgD0tvmNSg1" id="cv-btn" download class="btn-outline-light-wt" data-i18n="contact-cv"></a>
   </div>
 </section>
@@ -164,6 +177,7 @@ const translations = {
     'tab2'          : 'Langues',
     'tab3'          : 'Soft skills',
     'tab4'          : 'Passions',
+    'tab5'          : 'Parcours',
     'pres-text'     : "Actuellement étudiante en deuxième année de BUT Sciences des Données, parcours Exploration et Modélisation Statistique. Mon parcours m'a permis de développer des compétences en analyse statistique, traitement et visualisation des données. Je cherche à renforcer mes compétences techniques et analytiques.",
     'pres-text2'    : "N'hésitez pas à explorer ce site ou à télécharger mon CV pour en apprendre davantage !",
     'lang-fr'       : 'Français (langue maternelle)',
@@ -176,15 +190,20 @@ const translations = {
     'ss5'           : 'Adaptabilité',
     'ss6'           : 'Gestion du temps',
     'ss7'           : 'Capacité de résolution',
-    'pass1-title'   : '🎵 Musique · Cinéma · Art',
+    'pass1-title'   : ' Musique · Cinéma · Art',
     'pass1'         : 'Violon (3 ans), piano (1 an), danse contemporaine (3 ans), natation. Cours Florent pendant 5 ans. Fort intérêt pour le cinéma et la musique, avec une préférence pour le R&B.',
-    'pass2-title'   : '✈️ Voyages · Culture',
+    'pass2-title'   : ' Voyages · Culture',
     'pass2'         : "Passion pour les cultures du monde et les langues étrangères, notamment l'anglais, le portugais et le coréen. Objectif : faire le tour du monde.",
-    'pass3-title'   : '🍳 Cuisine',
+    'pass3-title'   : ' Cuisine',
     'pass3'         : "La cuisine demande organisation, créativité et patience. J'adore cuisiner pour partager ce moment avec les autres.",
     'contact-title' : 'Me contacter',
     'contact-send'  : 'Envoyer un message',
+    'contact-linkedin' : 'LinkedIn',
     'contact-cv'    : 'Télécharger mon CV',
+    'edu1-title'    : ' BUT Sciences des Données — IUT de Paris Rives de Seine',
+    'edu1-desc'     : '2e année, Parcours Exploration et Modélisation Statistique (EMS). Formation en analyse statistique, traitement de données, visualisation et programmation (R, Python, SQL, SAS). Projets appliqués en partenariat avec des organisations professionnelles.',
+    'edu2-title'    : ' Baccalauréat Technologique (STMG) — Lycée Hélène Boucher',
+    'edu2-desc'     : 'Spécialité : Mercatique. Mention : Bien. Obtenu en 2024.',
   },
   en: {
     'nav-home'      : 'Home',
@@ -197,6 +216,7 @@ const translations = {
     'tab2'          : 'Languages',
     'tab3'          : 'Soft skills',
     'tab4'          : 'Interests',
+    'tab5'          : 'Education',
     'pres-text'     : "Currently a second-year Data Science student (BUT Sciences des Données), Exploration & Statistical Modelling track. My academic journey has helped me build skills in statistical analysis, data processing and data visualisation. I am looking to strengthen my technical and analytical abilities.",
     'pres-text2'    : "Feel free to explore this site or download my CV to learn more about me!",
     'lang-fr'       : 'French (native)',
@@ -209,15 +229,20 @@ const translations = {
     'ss5'           : 'Adaptability',
     'ss6'           : 'Time management',
     'ss7'           : 'Problem solving',
-    'pass1-title'   : '🎵 Music · Cinema · Art',
+    'pass1-title'   : ' Music · Cinema · Art',
     'pass1'         : 'Violin (3 yrs), piano (1 yr), contemporary dance (3 yrs), swimming. Acting school for 5 years. Passionate about cinema and music, with a preference for R&B.',
-    'pass2-title'   : '✈️ Travel · Culture',
+    'pass2-title'   : ' Travel · Culture',
     'pass2'         : 'Passion for world cultures and foreign languages — especially English, Portuguese and Korean. Goal: travel the world.',
-    'pass3-title'   : '🍳 Cooking',
+    'pass3-title'   : ' Cooking',
     'pass3'         : 'Cooking takes organisation, creativity and patience. I love cooking for others and sharing that moment.',
     'contact-title' : 'Get in touch',
     'contact-send'  : 'Send a message',
+    'contact-linkedin' : 'LinkedIn',
     'contact-cv'    : 'Download my CV',
+    'edu1-title'    : ' Data Science Degree (BUT) — IUT de Paris Rives de Seine',
+    'edu1-desc'     : '2nd year, Exploration & Statistical Modelling track. Training in statistical analysis, data processing, visualisation and programming (R, Python, SQL, SAS). Applied projects in partnership with professional organisations.',
+    'edu2-title'    : ' French Technological Baccalauréat (STMG) — Lycée Hélène Boucher',
+    'edu2-desc'     : 'Specialisation: Marketing. Grade: Bien (Merit). Obtained in 2024.',
   }
 };
 
